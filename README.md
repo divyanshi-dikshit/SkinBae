@@ -1,8 +1,9 @@
-# SkinBaé - Premium Skincare E-Commerce Website
-
-![SkinBaé Logo](./SkinBaé.png)
-
-A modern, responsive e-commerce platform for premium skincare products with intelligent skin-type recommendations and an interactive shopping experience.
+# SkinBaé - Premium Skincare Experience
+ 
+SkinBaé is a modern, intelligent skincare e-commerce platform designed to help you discover the perfect products for your unique skin type through personalized recommendations and expert guidance.
+ 
+## 🔗 Live Link
+You can view the live project here: **skin-bae.vercel.app**
 
 ## 📸 Screenshots
 
