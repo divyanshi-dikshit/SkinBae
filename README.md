@@ -3,7 +3,7 @@
 SkinBaé is a modern, intelligent skincare e-commerce platform designed to help you discover the perfect products for your unique skin type through personalized recommendations and expert guidance.
  
 ## 🔗 Live Link
-You can view the live project here: **skin-bae.vercel.app**
+You can view the live project here: **https://skin-bae.vercel.app**
 
 ## 📸 Screenshots
 
