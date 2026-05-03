@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkinBaé - Premium Skincare</title>
+  <link rel="icon" type="image/png" href="SkinBaé.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="navbar" class="navbar">
+  <div class="container navbar-content">
+    <div class="logo" tabindex="0" aria-label="Home">
+      <h1>SkinBaé</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#quiz">Skin Quiz</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+    
+    <div class="nav-actions" style="display: flex; align-items: center; gap: 1.5rem;">
+     
+      <div id="cart-icon" class="cart-icon" tabindex="0" aria-label="View Cart">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span id="cart-count" class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <main>
+    <section class="hero-section">
+  <h2>Elevate Your Skincare Routine</h2>
+  <p>Discover premium formulas crafted for your unique skin type.</p>
+
+  <div class="hero-buttons">
+    <button id="shop-now-btn" class="btn-primary">Shop Now</button>
+    <button id="skin-test-btn" class="btn-secondary">Skin-Type Test</button>
+  </div>
+</section>
+
+    <section id="categories" class="categories-section">
+      <div class="container">
+        <h3 class="section-title">Shop By Skin Type</h3>
+        <div class="categories-grid" role="list">
+          <button class="category-btn" data-filter="oily" aria-pressed="false">Oily</button>
+          <button class="category-btn" data-filter="dry" aria-pressed="false">Dry</button>
+          <button class="category-btn" data-filter="acne" aria-pressed="false">Acne</button>
+          <button class="category-btn" data-filter="combination" aria-pressed="false">Combination</button>
+          <button class="category-btn active" data-filter="all" aria-pressed="true">All</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="products-header">
+          <h3 class="section-title">Our Products</h3>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search products..."
+            aria-label="Search products"
+          />
+        </div>
+        <div id="products-grid" class="products-grid" role="list"></div>
+      </div>
+    </section>
+
+    <div id="product-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+      <div class="modal-content" role="document">
+        <button id="modal-close" class="modal-close" aria-label="Close Product Details">&times;</button>
+        <div class="modal-body">
+          <img id="modal-img" src="" alt="" class="modal-img" />
+          <div class="modal-info">
+            <h4 id="modal-title"></h4>
+            <p id="modal-description"></p>
+            <p><strong>Ingredients:</strong> <span id="modal-ingredients"></span></p>
+            <p><strong>Skin Type:</strong> <span id="modal-skin-type"></span></p>
+            <p class="modal-price" id="modal-price"></p>
+            <button id="modal-add-to-cart" class="btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="quiz" class="quiz-section">
+      <div class="container">
+        <h3 class="section-title">Find Your Perfect Products</h3>
+        <form id="skin-quiz" aria-describedby="quiz-desc">
+          <p id="quiz-desc" class="sr-only">Answer the following questions to get product recommendations.</p>
+          <div class="quiz-question">
+            <label for="q1">1. How does your skin usually feel during the day?</label>
+            <select id="q1" name="q1" required>
+              <option value="">Select</option>
+              <option value="oily">Oily and shiny</option>
+              <option value="dry">Dry and flaky</option>
+              <option value="acne">Prone to breakouts</option>
+              <option value="combination">Combination of oily and dry</option>
+            </select>
+          </div>
+          <div class="quiz-question">
+            <label for="q2">2. What is your biggest skin concern?</label>
+            <select id="q2" name="q2" required>
+              <option value="">Select</option>
+              <option value="acne">Acne and blemishes</option>
+              <option value="dry">Dryness and tightness</option>
+              <option value="oily">Excess oiliness</option>
+              <option value="combination">Uneven texture or tone</option>
+            </select>
+          </div>
+          <div class="quiz-question">
+            <label for="q3">3. How sensitive is your skin?</label>
+            <select id="q3" name="q3" required>
+              <option value="">Select</option>
+              <option value="dry">Very sensitive</option>
+              <option value="oily">Normal</option>
+              <option value="combination">Somewhat sensitive</option>
+              <option value="acne">Not sensitive</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" aria-label="Get Recommendations">Get Recommendations</button>
+        </form>
+        <div id="quiz-results" class="quiz-results" aria-live="polite"></div>
+      </div>
+    </section>
+    <section id="bareface" class="bareface-section">
+  <div class="container">
+    <h2>Bare Face Method</h2>
+    <p class="bareface-intro">
+      Not sure about your skin type? Try this simple at-home test used by skincare experts.
+    </p>
+
+    <div class="bareface-steps">
+
+      <div class="step">
+        <span>01</span>
+        <h4>Cleanse Your Face</h4>
+        <p>Wash your face with a gentle cleanser and pat dry. Do not apply any products.</p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h4>Wait for 10 mins.</h4>
+        <p>Let your skin rest naturally without touching or applying anything.</p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h4>Observe Your Skin</h4>
+        <p>Check how your skin feels and looks in natural light.</p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
+        <h4>Identify Your Type</h4>
+        <ul>
+          <li><strong>Dry:</strong> Tight, flaky</li>
+          <li><strong>Oily:</strong> Shiny, greasy</li>
+          <li><strong>Combination:</strong> Oily T-zone, dry cheeks</li>
+          <li><strong>Normal:</strong> Balanced and smooth</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <aside id="cart-sidebar" class="cart-sidebar" aria-hidden="true" aria-label="Shopping Cart">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="cart-close-btn" aria-label="Close Cart">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items" role="list"></div>
+      <div class="cart-footer">
+        <p class="cart-total" aria-live="polite">Total: <span id="cart-total">₹0</span></p>
+        <button id="checkout-btn" class="btn-primary" disabled>Checkout</button>
+      </div>
+    </aside>
+
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h3 class="section-title">What Our Customers Say</h3>
+        <div class="testimonials-grid">
+          <blockquote>
+            <p>"SkinBaé transformed my skin! The products are gentle and effective."</p>
+            <footer>— Neha Y.</footer>
+          </blockquote>
+          <blockquote>
+            <p>"Love how clean and premium everything feels. Highly recommend!"</p>
+            <footer>— Kartik M.</footer>
+          </blockquote>
+          <blockquote>
+            <p>"The skin quiz gave me perfect recommendations for my combination skin."</p>
+            <footer>— Rhidhima V.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2024 SkinBaé. All rights reserved.</p>
+      <p>
+        <a href="mailto:support@SkinBaé.com" aria-label="Email support">support@SkinBaé.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
