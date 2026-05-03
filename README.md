@@ -8,31 +8,24 @@ A modern, responsive e-commerce platform for premium skincare products with inte
 
 ### Homepage
 ![Homepage Hero Section](./screenshots/homepage-hero.png)
-*Add screenshot of the hero section with "Elevate Your Skincare Routine" heading*
 
 ### Product Catalog
 ![Product Grid](./screenshots/product-grid.png)
-*Add screenshot of the product catalog with category filters*
 
 ### Product Details Modal
 ![Product Modal](./screenshots/product-modal.png)
-*Add screenshot of the product details modal showing ingredients and description*
 
 ### Skin Type Quiz
 ![Skin Quiz](./screenshots/skin-quiz.png)
-*Add screenshot of the skin type quiz section*
 
 ### Shopping Cart
 ![Shopping Cart](./screenshots/shopping-cart.png)
-*Add screenshot of the cart sidebar with products*
 
 ### Bare Face Method
-![Bare Face Method](./screenshots/bareface-method.png)
-*Add screenshot of the Bare Face Method section*
+![Bare Face Method](./screenshots/bare-face-method.png)
 
 ### Testimonials
 ![What Our Customers Say](./screenshots/testimonials.png)
-*Add screenshot of the Bare Face Method section*
 
 ## ✨ Features
 
@@ -109,7 +102,7 @@ skinbae/
     ├── skin-quiz.png
     ├── shopping-cart.png
     ├── testimonials.png
-    └── bareface-method.png
+    └── bare-face-method.png
 ```
 
 ## 📋 How to Use
