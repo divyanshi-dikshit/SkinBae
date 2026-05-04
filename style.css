@@ -237,20 +237,16 @@ p {
 }
 .product-img-container {
   width: 100%;
-  padding-top: 100%;
+  height: 220px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 .product-img-container img {
-  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease;
+  object-fit: contain; 
 }
 .product-card:hover img {
   transform: scale(1.05);
